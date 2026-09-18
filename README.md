@@ -30,9 +30,6 @@ Given demographic and location data for a California census block group, predict
 
 The scratch implementation gets close to scikit-learn's accuracy, which confirms the underlying logic (splitting, tree-building) is correct. The big gap in training time (0.69s vs 65.68s) is expected and is actually the more interesting result  it shows exactly why production ML libraries are written in optimised/compiled code rather than pure Python: the algorithm is the same, but the implementation efficiency is not.
 
-## Business Results
-
-An R² of 0.89 means the model explains 89% of the variation in house prices from the features alone, with an average prediction error (MAE) of $50,670 per district. The from-scratch version reaching 0.85 R²  only 4 points below the production scikit-learn model  shows the core modelling logic, not just the library's optimisation, is what drives most of the accuracy here.
 
 ## What I learned
 
